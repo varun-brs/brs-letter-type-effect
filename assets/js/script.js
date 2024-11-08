@@ -1,8 +1,6 @@
 const containerDiv = document.getElementById("content");
 const resetBtn = document.getElementById("resetBtn");
 
-let chathams_blue = "#1A4B84";
-
 function setContent() {
   const content = `
   <div class="container">
@@ -68,9 +66,3 @@ resetBtn.addEventListener("click", restartTypeEffect);
 
 setContent();
 document.querySelectorAll("[data-type]").forEach(draw);
-
-function setTheme(theme) {
-  document.documentElement.style.setProperty("--primary-color", theme);
-  localStorage.setItem("movie-theme", theme);
-}
-setTheme(localStorage.getItem("movie-theme") || chathams_blue);
